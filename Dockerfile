@@ -1,10 +1,10 @@
 # ==============================================================================
-# Cloud Run LLM Server (llama.cpp + Qwen3-0.6B)
+# Cloud Run LLM Server (llama.cpp + Qwen3-0.6B Official Q8_0 High Precision)
 # ==============================================================================
 FROM ghcr.io/ggml-org/llama.cpp:server
 
-# Download official Qwen3-0.6B Q4_K_M GGUF model (~420MB)
-ADD https://huggingface.co/Qwen/Qwen3-0.6B-GGUF/resolve/main/Qwen3-0.6B-Q4_K_M.gguf /models/model.gguf
+# Download official Qwen3-0.6B 8-bit high precision GGUF (~639MB)
+ADD https://huggingface.co/Qwen/Qwen3-0.6B-GGUF/resolve/main/Qwen3-0.6B-Q8_0.gguf /models/model.gguf
 
 # Configure llama-server via native environment variables
 ENV LLAMA_ARG_MODEL=/models/model.gguf
