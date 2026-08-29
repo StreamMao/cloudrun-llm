@@ -4,7 +4,7 @@
 FROM ghcr.io/ggml-org/llama.cpp:server
 
 # Download official Qwen3-0.6B Q4_K_M GGUF model (~420MB)
-ADD https://huggingface.co/Qwen/Qwen3-0.6B-GGUF/resolve/main/qwen3-0.6b-q4_k_m.gguf /models/model.gguf
+ADD https://huggingface.co/Qwen/Qwen3-0.6B-GGUF/resolve/main/Qwen3-0.6B-Q4_K_M.gguf /models/model.gguf
 
 # Configure llama-server via native environment variables
 ENV LLAMA_ARG_MODEL=/models/model.gguf
