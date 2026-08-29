@@ -127,3 +127,18 @@ print()
 * **API Host**：`https://<YOUR_CLOUD_RUN_URL>/v1`
 * **API Key**：随便填写（如 `none`）
 * **模型名称**：`qwen3-4b`
+
+---
+
+## ☁️ 部署到 Oracle Cloud Always Free (ARM 2C 4G)
+
+如果您希望在 **Oracle Always Free (甲骨文永久免费) Ampere A1 ARM 实例** 上 24 小时常驻运行 LLM，请直接使用我们内置的一键部署套件：
+
+👉 **[查看 Oracle ARM 一键部署完整文档与脚本](./oracle/README.md)**
+
+```bash
+cd oracle
+chmod +x install.sh manage.sh
+sudo ./install.sh
+```
+
