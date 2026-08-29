@@ -1,7 +1,7 @@
 # ==============================================================================
 # Cloud Run LLM Server (llama.cpp + Qwen2.5-1.5B-Instruct)
 # ==============================================================================
-FROM ghcr.io/ggerganov/llama.cpp:server
+FROM ghcr.io/ggml-org/llama.cpp:server
 
 # Download the Qwen2.5-1.5B-Instruct Q4_K_M GGUF model during image build
 # (~986MB, provides the best balance between size, speed, and CPU RAM usage)
