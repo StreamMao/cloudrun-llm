@@ -104,7 +104,7 @@ def main():
 
     # Sample queries
     chat_stream(base_url, "你好，请用一句话介绍你自己。")
-    chat_stream(base_url, "写一首关于云计算的五言绝句。")
+    chat_stream(base_url, "【财报分析】英伟达(NVDA)最新季度营收351亿美元，同比增长94%，净利润193亿美元。数据中心营收308亿美元，Blackwell芯片需求强劲但面临供应链瓶颈。请提炼核心看点，并给出多空（Bull/Bear）简评。")
 
 if __name__ == "__main__":
     main()
