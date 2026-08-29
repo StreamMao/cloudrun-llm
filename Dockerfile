@@ -1,10 +1,10 @@
 # ==============================================================================
-# Cloud Run LLM Server (llama.cpp + Qwen2.5-3B-Instruct)
+# Cloud Run LLM Server (llama.cpp + Qwen3-4B)
 # ==============================================================================
 FROM ghcr.io/ggml-org/llama.cpp:server
 
-# Download official Qwen2.5-3B-Instruct Q4_K_M GGUF model (~1.93GB)
-ADD https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf /models/model.gguf
+# Download official Qwen3-4B Q4_K_M GGUF model (~2.5GB)
+ADD https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/Qwen3-4B-Q4_K_M.gguf /models/model.gguf
 
 # Configure llama-server via native environment variables
 ENV LLAMA_ARG_MODEL=/models/model.gguf
