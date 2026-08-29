@@ -79,7 +79,7 @@ def chat_stream(base_url: str, prompt: str):
                     try:
                         data = json.loads(data_str)
                         delta = data.get("choices", [{}])[0].get("delta", {})
-                        content = delta.get("content", "")
+                        content = delta.get("content") or ""
                         print(content, end="", flush=True)
                     except json.JSONDecodeError:
                         pass
