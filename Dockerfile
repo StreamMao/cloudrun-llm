@@ -16,4 +16,4 @@ EXPOSE 8080
 # -c 2048 : Context window length (sufficient for chats, keeps memory low)
 # -np 2   : 2 parallel slots for handling concurrent prompts
 # -t 2    : 2 CPU threads (matching Cloud Run 2 vCPU allocation)
-ENTRYPOINT ["/llama-server", "-m", "/models/model.gguf", "--host", "0.0.0.0", "--port", "8080", "-c", "2048", "-np", "2", "-t", "2"]
+ENTRYPOINT ["llama-server", "-m", "/models/model.gguf", "--host", "0.0.0.0", "--port", "8080", "-c", "2048", "-np", "2", "-t", "2"]
