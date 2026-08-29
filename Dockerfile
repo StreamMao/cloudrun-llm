@@ -10,9 +10,13 @@ ADD https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/Qwen3-4B-Q4_K_M.gguf 
 ENV LLAMA_ARG_MODEL=/models/model.gguf
 ENV LLAMA_ARG_HOST=0.0.0.0
 ENV LLAMA_ARG_PORT=8080
-ENV LLAMA_ARG_CTX_SIZE=4096
+ENV LLAMA_ARG_CTX_SIZE=2048
 ENV LLAMA_ARG_N_PARALLEL=1
 ENV LLAMA_ARG_THREADS=2
+
+# Fix: disable mmap to prevent I/O locking on Cloud Run container overlayfs
+ENV LLAMA_ARG_NO_MMAP=1
+ENV LLAMA_ARG_MMAP=false
 
 ENV PORT=8080
 ENV HOST=0.0.0.0
