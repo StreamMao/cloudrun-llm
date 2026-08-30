@@ -48,7 +48,7 @@ def chat_stream(base_url: str, prompt: str):
             {"role": "user", "content": prompt}
         ],
         "temperature": 0.7,
-        "max_tokens": 512,
+        "max_tokens": 1500,
         "stream": True
     }
     
